@@ -1,10 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import MainApp from "./MainApp.jsx";
-import "./index.css";
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import MainApp from "./MainApp.jsx";
+// import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <MainApp />
-    </React.StrictMode>
-);
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//     <React.StrictMode>
+//         <MainApp />
+//     </React.StrictMode>
+// );
+
+export { PrimaryBtn, SecondaryBtn, SecondaryBtn2 } from "./components/Button";
