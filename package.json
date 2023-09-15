@@ -1,13 +1,25 @@
 {
     "name": "react-wind-components",
+    "version": "0.0.6",
+    "description": "React components designed with the tailwind css",
+    "author": "Anand Vyas",
+    "keywords": [
+        "react",
+        "tailwind"
+    ],
     "private": false,
-    "version": "0.0.4",
     "type": "module",
+    "main": "dist/index.js",
+    "files": [
+        "dist",
+        "README.md"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "babel src -d dist",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepublish": "rm -rf ./dist && npm run build"
     },
     "dependencies": {
         "@babel/core": "^7.22.10",

@@ -1,1 +1,1 @@
-export { PrimaryBtn, SecondaryBtn, SecondaryBtn2 } from "./components/Button";
+export { PrimaryBtn, SecondaryBtn, SecondaryBtn2 } from "./lib/Button";
