@@ -18,8 +18,7 @@
         "dev": "vite",
         "build": "babel src -d dist",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview",
-        "prepublish": "rm -rf ./dist && npm run build"
+        "preview": "vite preview"
     },
     "dependencies": {
         "@babel/core": "^7.22.10",
