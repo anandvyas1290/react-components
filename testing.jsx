@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { PrimaryBtn, SecondaryBtn, SecondaryBtn2 } from "./src";
+import { Button } from "./src";
 import "./src/index.css";
 
 let mode = import.meta.env.VITE_MODE;
@@ -8,9 +8,7 @@ let mode = import.meta.env.VITE_MODE;
 mode === "development"
     ? createRoot(document.getElementById("root")).render(
           <React.StrictMode>
-              <PrimaryBtn>Ok</PrimaryBtn>
-              <SecondaryBtn>Ok</SecondaryBtn>
-              <SecondaryBtn2>Ok</SecondaryBtn2>
+              <Button>Ok</Button>
           </React.StrictMode>
       )
     : null;
