@@ -7,6 +7,7 @@ export default defineConfig({
         lib: {
             entry: "src/index.jsx",
             name: "react-wind-components",
+            fileName: "react-wind-components",
         },
         rollupOptions: {},
     },
