@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
@@ -7,9 +8,9 @@ export default defineConfig({
         lib: {
             entry: "src/index.jsx",
             name: "react-wind-components",
-            fileName: "react-wind-components",
+            fileName: "index",
         },
         rollupOptions: {},
     },
-    plugins: [react()],
+    plugins: [react(), tailwindcss()],
 });
