@@ -1,7 +1,7 @@
-// import "./styles.scss";
-
 const dom = document.createElement("div");
-
+// let dom = (
+//     <div className="fixed top-[108px] left-[10vw] right-[10vw] z-[9999] text-xs font-medium tracking-widest"></div>
+// );
 function Message() {
     dom.classList.add("message");
     window.onload = () => document.body.appendChild(dom);
@@ -13,17 +13,22 @@ Message.prototype.show = function (
     type = "info",
     onClose = Function.prototype
 ) {
-    const contentBox = document.createElement("div");
+    // const contentBox = document.createElement("div");
+    const contentBox = (
+        <div className="absolute left-1/2 translate-x-1/2 px-2 py-2.5 rounded transition-all duration-300">
+            <span>{content}</span>
+        </div>
+    );
     const contentText = document.createElement("span");
     // const icon = document.createElement("i");
     // icon.classList.add(type);
     // icon.classList.add("message-icon");
-    contentText.innerText = content;
-    contentBox.classList.add("content-box");
+    // contentText.innerText = content;
+    // contentBox.classList.add("content-box");
     contentBox.classList.add(`${type}-custom-message`);
     contentBox.classList.add("animate-in");
     // contentBox.appendChild(icon);
-    contentBox.appendChild(contentText);
+    // contentBox.appendChild(contentText);
     contentBox.style.top = `${this.count * 42}px`;
     dom.appendChild(contentBox);
 
