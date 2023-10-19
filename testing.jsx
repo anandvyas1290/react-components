@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { Button, Message } from "./src";
+import { Button } from "./src";
 
 let mode = import.meta.env.VITE_MODE;
 
