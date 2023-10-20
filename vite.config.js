@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react-swc";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
@@ -16,12 +17,16 @@ export default defineConfig({
         // manifest: true,
         outDir: "dist",
         lib: {
-            // entry: "src/index.jsx",
-            entry: resolve(__dirname, "src/index.jsx"),
+            entry: "src/index.jsx",
+            // entry: resolve(__dirname, "src/index.jsx"),
             name: "react-wind-components",
             fileName: "index",
         },
         rollupOptions: {},
     },
-    plugins: [react(), tailwindcss()],
+    plugins: [
+        react(),
+        cssInjectedByJsPlugin({ relativeCSSInjection: true }),
+        tailwindcss(),
+    ],
 });
