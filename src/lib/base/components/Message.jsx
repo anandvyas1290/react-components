@@ -31,7 +31,7 @@ const typeHandler = (type) => {
 
 Message.prototype.show = function (
     content,
-    duration = 4000000,
+    duration = 4000,
     type = "info",
     onClose = Function.prototype
 ) {

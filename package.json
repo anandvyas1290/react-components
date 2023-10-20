@@ -9,11 +9,18 @@
     ],
     "private": false,
     "type": "module",
-    "main": "dist/index.js",
     "files": [
         "dist",
         "README.md"
     ],
+    "main": "dist/index.umd.cjs",
+    "module": "./dist/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.umd.cjs"
+        }
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",

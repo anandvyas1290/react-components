@@ -1,12 +1,23 @@
 import react from "@vitejs/plugin-react-swc";
-import tailwindcss from "tailwindcss";
+import { resolve } from "path";
 import { defineConfig } from "vite";
+
+import tailwindcss from "tailwindcss";
+// import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    // css: {
+    // postcss: {
+    // plugins: [require("tailwindcss"), require("autoprefixer")],
+    // },
+    // },
     build: {
+        // manifest: true,
+        outDir: "dist",
         lib: {
-            entry: "src/index.jsx",
+            // entry: "src/index.jsx",
+            entry: resolve(__dirname, "src/index.jsx"),
             name: "react-wind-components",
             fileName: "index",
         },
