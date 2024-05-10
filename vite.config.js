@@ -14,15 +14,21 @@ export default defineConfig({
     // },
     // },
     build: {
-        // manifest: true,
-        outDir: "dist",
+        // outDir: "dist",
         lib: {
-            entry: "src/index.jsx",
-            // entry: resolve(__dirname, "src/index.jsx"),
+            entry: path.resolve(__dirname, "src/index.jsx"),
             name: "react-wind-components",
-            fileName: "index",
+            fileName: (format) => `index.${format}.js`,
         },
-        rollupOptions: {},
+
+        rollupOptions: {
+            external: ["react", "react-dom"],
+            output: {
+                globals: {
+                    react: "React",
+                },
+            },
+        },
     },
     plugins: [
         react(),
