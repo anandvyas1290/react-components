@@ -1,16 +1,31 @@
+import DotedLoader from "./DotedLoader";
 import React from "react";
 
-const buttonStyles =
-    "flex align-middle justify-center px-11 py-2.5 text-base font-semibold border-2 rounded-2xl transition-all duration-300 hover:bg-opacity-95";
-
-const Button = ({ children, className, onClick }) => {
+export default function Button({
+    className,
+    label,
+    onClick,
+    loading,
+    disabled,
+    ...props
+}) {
     return (
         <button
-            className={`${buttonStyles} text-white bg-rwc-primary1 ${className}`}
+            className={`px-4 py-2.5 flex justify-center rounded-lg2 font-semibold ${
+                disabled
+                    ? "cursor-not-allowed text-grey3 bg-grey14 border border-grey3"
+                    : "text-gray-50 bg-rwc-primary1"
+            } text-white hover:bg-opacity-95 transition-all duration-300 ${className}`}
             onClick={onClick}
+            disabled={disabled || loading}
         >
-            {children}
+            {loading ? (
+                <div className="">
+                    <DotedLoader fill={`${props?.loaderFill ?? "#fff"}`} />{" "}
+                </div>
+            ) : (
+                label
+            )}
         </button>
     );
-};
-export default Button;
+}

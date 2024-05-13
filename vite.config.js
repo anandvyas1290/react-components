@@ -1,20 +1,18 @@
-import react from "@vitejs/plugin-react-swc";
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-import { resolve } from "path";
+import path from "path";
 import { defineConfig } from "vite";
-
 import tailwindcss from "tailwindcss";
+import react from "@vitejs/plugin-react";
 // import autoprefixer from "autoprefixer";
+// import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
     // css: {
-    // postcss: {
-    // plugins: [require("tailwindcss"), require("autoprefixer")],
-    // },
+    //     postcss: {
+    //         plugins: [tailwindcss(), autoprefixer()],
+    //     },
     // },
     build: {
-        // outDir: "dist",
         lib: {
             entry: path.resolve(__dirname, "src/index.jsx"),
             name: "react-wind-components",
@@ -32,7 +30,7 @@ export default defineConfig({
     },
     plugins: [
         react(),
-        cssInjectedByJsPlugin({ relativeCSSInjection: true }),
         tailwindcss(),
+        // cssInjectedByJsPlugin({ relativeCSSInjection: true }),
     ],
 });

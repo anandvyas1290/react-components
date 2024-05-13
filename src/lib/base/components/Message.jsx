@@ -7,11 +7,10 @@ import {
     errorMessage,
 } from "../../styles/components/message";
 
-const dom = document.createElement("div");
-
 function Message() {
-    dom.className = messageStyles;
-    window.onload = () => document.body.appendChild(dom);
+    // const dom = document?.createElement("div");
+    // dom.className = messageStyles;
+    // window.onload = () => document.body.appendChild(dom);
 }
 
 const typeHandler = (type) => {

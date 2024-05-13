@@ -1,4 +1,5 @@
 import React from "react";
+// import "./src/styles.css";
 import { createRoot } from "react-dom/client";
 
 import { Button } from "./src";
@@ -15,6 +16,7 @@ import { Button } from "./src";
 
 createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <Button>Ok</Button>
+        {/* <h1>dfd</h1> */}
+        <Button label="OK" />
     </React.StrictMode>
 );
