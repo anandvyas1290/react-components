@@ -1,10 +1,12 @@
 {
     "name": "react-wind-components",
     "private": false,
-    "version": "0.0.23",
-    "description": "React components designed with the tailwind css",
+    "version": "0.0.24",
     "author": "Anand Vyas",
+    "description": "React components designed with the tailwind css",
     "type": "module",
+    "license": "MIT",
+    "repository": "https://github.com/anandvyas1290/react-components.git",
     "keywords": [
         "react",
         "tailwind"
@@ -12,15 +14,14 @@
     "files": [
         "dist",
         "package.json",
-        "README.md",
-        "lib"
+        "README.md"
     ],
-    "main": "./dist/react-wind-components.cjs",
+    "main": "./dist/react-wind-components.umd.cjs",
     "module": "./dist/react-wind-components.js",
     "exports": {
         ".": {
             "import": "./dist/react-wind-components.js",
-            "require": "./dist/react-wind-components.cjs"
+            "require": "./dist/react-wind-components.umd.cjs"
         }
     },
     "scripts": {
@@ -29,11 +30,11 @@
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "test": "vitest run",
-        "watch": "vitest"
+        "watch": "vitest",
+        "prepublishOnly": "yarn run build"
     },
     "dependencies": {
         "autoprefixer": "^10.4.19",
-        "postcss": "^8.4.38",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.4.3",
@@ -41,7 +42,6 @@
     },
     "peerDependencies": {
         "autoprefixer": "^10.4.15",
-        "postcss": "^8.4.28",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.3.3"
