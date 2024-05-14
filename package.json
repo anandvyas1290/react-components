@@ -1,26 +1,65 @@
 {
     "name": "react-wind-components",
     "private": false,
-    "version": "0.0.1",
+    "version": "0.0.26",
+    "author": "Anand Vyas",
+    "description": "React components designed with the tailwind css",
     "type": "module",
+    "license": "MIT",
+    "repository": "https://github.com/anandvyas1290/react-components.git",
+    "keywords": [
+        "react",
+        "tailwind"
+    ],
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "main": "./dist/react-wind-components.umd.cjs",
+    "module": "./dist/react-wind-components.js",
+    "exports": {
+        ".": {
+            "import": "./dist/react-wind-components.js",
+            "require": "./dist/react-wind-components.umd.cjs"
+        }
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "test": "vitest run",
+        "watch": "vitest",
+        "prepublishOnly": "yarn run build"
     },
     "dependencies": {
+        "autoprefixer": "^10.4.19",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.4.3",
+        "vite-plugin-lib-inject-css": "^2.1.1"
+    },
+    "peerDependencies": {
+        "autoprefixer": "^10.4.15",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.3.3"
     },
     "devDependencies": {
-        "@types/react": "^18.2.15",
-        "@types/react-dom": "^18.2.7",
-        "@vitejs/plugin-react-swc": "^3.3.2",
-        "eslint": "^8.45.0",
-        "eslint-plugin-react": "^7.32.2",
+        "@testing-library/dom": "^10.1.0",
+        "@testing-library/react": "^15.0.7",
+        "@types/react": "^18.2.66",
+        "@types/react-dom": "^18.2.22",
+        "@vitejs/plugin-react": "^4.2.1",
+        "c8": "^9.1.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.1",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.3",
-        "vite": "^4.4.5"
+        "eslint-plugin-react-refresh": "^0.4.6",
+        "jsdom": "^24.0.0",
+        "react-test-renderer": "^18.3.1",
+        "vite": "^5.2.0",
+        "vitest": "^1.6.0"
     }
 }

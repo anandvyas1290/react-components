@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dummy-element {
+    color: red !important;
+    font-style: italic;
+    border: 2px solid greenyellow;
+}
