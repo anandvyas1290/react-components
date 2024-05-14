@@ -1,7 +1,7 @@
 {
     "name": "react-wind-components",
     "private": false,
-    "version": "0.0.22",
+    "version": "0.0.23",
     "description": "React components designed with the tailwind css",
     "author": "Anand Vyas",
     "type": "module",
@@ -15,12 +15,12 @@
         "README.md",
         "lib"
     ],
-    "main": "./dist/react-wind-components.umd.js",
-    "module": "./dist/react-wind-components.es.js",
+    "main": "./dist/react-wind-components.cjs",
+    "module": "./dist/react-wind-components.js",
     "exports": {
         ".": {
-            "import": "./dist/react-wind-components.es.js",
-            "require": "./dist/react-wind-components.umd.js"
+            "import": "./dist/react-wind-components.js",
+            "require": "./dist/react-wind-components.cjs"
         }
     },
     "scripts": {
@@ -36,7 +36,8 @@
         "postcss": "^8.4.38",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "tailwindcss": "^3.4.3"
+        "tailwindcss": "^3.4.3",
+        "vite-plugin-lib-inject-css": "^2.1.1"
     },
     "peerDependencies": {
         "autoprefixer": "^10.4.15",
