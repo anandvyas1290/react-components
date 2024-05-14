@@ -18,6 +18,7 @@ export default function Button({
             } text-white hover:bg-opacity-95 transition-all duration-300 ${className}`}
             onClick={onClick}
             disabled={disabled || loading}
+            style={{ border: "2px solid yellow" }}
         >
             {loading ? (
                 <div className="">
