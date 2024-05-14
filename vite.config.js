@@ -1,22 +1,17 @@
-import path from "path";
+import { resolve } from "path";
 import { defineConfig } from "vite";
-import tailwindcss from "tailwindcss";
 import react from "@vitejs/plugin-react";
-// import autoprefixer from "autoprefixer";
-// import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 
-// https://vitejs.dev/config/
+import tailwindcss from "tailwindcss";
+
 export default defineConfig({
-    // css: {
-    //     postcss: {
-    //         plugins: [tailwindcss(), autoprefixer()],
-    //     },
-    // },
     build: {
         lib: {
-            entry: path.resolve(__dirname, "src/index.jsx"),
+            entry: resolve(__dirname, "lib/main.jsx"),
             name: "react-wind-components",
-            fileName: (format) => `index.${format}.js`,
+            // fileName: (format) => `react-wind-components.${format}.js`,
+            fileName: "react-wind-components",
         },
 
         rollupOptions: {
@@ -28,9 +23,5 @@ export default defineConfig({
             },
         },
     },
-    plugins: [
-        react(),
-        tailwindcss(),
-        // cssInjectedByJsPlugin({ relativeCSSInjection: true }),
-    ],
+    plugins: [react(), tailwindcss(), libInjectCss()],
 });
