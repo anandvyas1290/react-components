@@ -1,7 +1,7 @@
 {
     "name": "react-wind-components",
     "private": false,
-    "version": "0.0.25",
+    "version": "0.0.26",
     "author": "Anand Vyas",
     "description": "React components designed with the tailwind css",
     "type": "module",
@@ -58,7 +58,6 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.6",
         "jsdom": "^24.0.0",
-        "postcss": "^8.4.38",
         "react-test-renderer": "^18.3.1",
         "vite": "^5.2.0",
         "vitest": "^1.6.0"
