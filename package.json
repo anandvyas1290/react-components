@@ -1,7 +1,7 @@
 {
     "name": "react-wind-components",
     "private": false,
-    "version": "0.0.18",
+    "version": "0.0.19",
     "description": "React components designed with the tailwind css",
     "author": "Anand Vyas",
     "type": "module",
